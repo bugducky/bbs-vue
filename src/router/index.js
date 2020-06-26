@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Home from '../components/Home.vue'
 import Article from '../components/Article.vue'
 import PostArticle from '../components/PostArticle.vue'
-import Backstage from '../components/Backstage.vue'
+import Backstage from '../components/backstage/Backstage.vue'
 
 
 Vue.use(Router)
