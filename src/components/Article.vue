@@ -77,7 +77,7 @@ export default {
     var that = this;
     this.axios
       .get(
-        "http://localhost:8086/articles/getArticle/" +
+        "http://localhost:8086/article/getarticle/" +
           that.$route.params.forArticleID
       )
       .then(res => {

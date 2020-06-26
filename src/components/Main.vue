@@ -29,7 +29,7 @@
 <script>
 export default {
   created() {
-    this.axios.get("http://localhost:8086/sort/getAll").then(res => {
+    this.axios.get("http://localhost:8086/sort/getall").then(res => {
       this.sorts = res.data;
     });
   },
@@ -47,7 +47,7 @@ export default {
       if (this.activeName != "") {
         var that = this;
         this.axios
-          .get("http://localhost:8086/articles/sortid/props/" + this.activeName)
+          .get("http://localhost:8086/article/sortid/props/" + this.activeName)
           .then(res => {
             that.articles = res.data;
           });

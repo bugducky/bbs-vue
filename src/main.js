@@ -9,10 +9,16 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import 'default-passive-events'
 import VueCookies from 'vue-cookies'
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(VueCookies)
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false;
+
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
+
+Vue.use(mavonEditor)
 
 $cookies.config('7d');
 

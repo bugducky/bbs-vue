@@ -35,12 +35,10 @@
 <script>
 
 import uuidv1 from 'uuid/v1';
-import { mavonEditor } from "mavon-editor";
-import "mavon-editor/dist/css/index.css";
 
 export default {
   components: {
-    mavonEditor
+
   },
   computed: {
     uuid() {
@@ -64,7 +62,7 @@ export default {
     };
   },
   created() {
-    this.axios.get("http://localhost:8086/sort/getAll").then(res => {
+    this.axios.get("http://localhost:8086/sort/getall").then(res => {
       this.options = res.data;
     });
   },
@@ -96,7 +94,7 @@ export default {
       this.article.a_id = uuidv1();
       var that = this;
       this.axios
-        .post("http://localhost:8086/articles/post", {
+        .post("http://localhost:8086/article/post", {
           a_id: that.article.a_id,
           a_name: that.article.a_name,
           a_author: that.getUserFromCookie(),
