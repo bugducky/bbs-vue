@@ -3,7 +3,7 @@
   <div>
     <Header></Header>
     <div>
-      <el-tabs v-model="activeName" @tab-click="handleClick">
+      <el-tabs v-model="activeName" @tab-click="handleClick" tabPosition="left">
         <el-tab-pane label="用户管理" name="first" v-if="getUserLimit=='admin'">
           <UserManager></UserManager>
         </el-tab-pane>
@@ -43,6 +43,11 @@ export default {
     return {
       activeName: "first"
     };
+  },
+  methods: {
+    handleClick(tab, event) {
+      console.log(tab, event);
+    }
   }
 };
 </script>
